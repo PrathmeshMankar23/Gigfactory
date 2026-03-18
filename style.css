@@ -133,17 +133,16 @@ body {
   margin: 0 35px;
   flex-shrink: 0;
 
-  /* Make visible on dark bg */
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-  transition: 0.3s;
+  filter: none; /* ❌ remove black-white effect */
+  opacity: 0.9;
+  transition: 0.3s ease;
 }
 
 .logo-track img:hover {
   opacity: 1;
   transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.6));
 }
-
 /* Animation */
 @keyframes scroll {
   0% { transform: translateX(0); }
@@ -191,22 +190,7 @@ h2::after {
   animation: scroll 20s linear infinite;
 }
 
-/* Logos */
-.logo-track img {
-  width: 120px;
-  height: 60px;
-  object-fit: contain;
-  margin-right: 40px; /* equal spacing */
-  flex-shrink: 0; /* prevent shrinking */
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: 0.3s;
-}
 
-.logo-track img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-}
 
 /* Animation */
 @keyframes scroll {
@@ -902,6 +886,8 @@ h2::after {
   50% { box-shadow: 0 0 15px rgba(252,185,0,0.25); }
   100% { box-shadow: 0 0 0 rgba(252,185,0,0.0); }
 }
+
+
 
 /* ===== FOOTER ===== */
 footer {
