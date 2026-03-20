@@ -1,15 +1,48 @@
 /* ===== RANDOM WORD HIGHLIGHT ===== */
 const words = document.querySelectorAll("#wordGrid span");
 
+function getWordGridPosition(index) {
+  // Calculate row and column based on 5x5 grid (25 words total)
+  const row = Math.floor(index / 5);
+  const col = index % 5;
+  return { row, col };
+}
+
 function highlightRandomWords() {
   if (!words.length) return;
 
   words.forEach(word => word.classList.remove("active"));
 
   let selected = new Set();
-  while (selected.size < Math.min(5, words.length)) {
-    let rand = Math.floor(Math.random() * words.length);
-    selected.add(rand);
+  
+  // Select exactly one word from each row (0-4)
+  for (let row = 0; row < 5; row++) {
+    let availableCols = [];
+    
+    // Find all available columns that haven't been used yet
+    for (let col = 0; col < 5; col++) {
+      let index = row * 5 + col;
+      if (!selected.has(index)) {
+        // Check if this column is already used by another selected word
+        let colUsed = false;
+        for (let selectedIdx of selected) {
+          let selectedCol = selectedIdx % 5;
+          if (selectedCol === col) {
+            colUsed = true;
+            break;
+          }
+        }
+        if (!colUsed) {
+          availableCols.push(index);
+        }
+      }
+    }
+    
+    // Randomly select one word from this row with available columns
+    if (availableCols.length > 0) {
+      let randomIndex = availableCols[Math.floor(Math.random() * availableCols.length)];
+      selected.add(randomIndex);
+    }
   }
 
   selected.forEach(index => {
@@ -75,7 +108,7 @@ if (timeline && phases.length) {
 }
 
 
-// ===== CONTACT MODAL =====
+/* ===== CONTACT MODAL ===== */
 const modal = document.getElementById("contactModal");
 const openBtns = document.querySelectorAll(".open-contact");
 const closeBtn = document.getElementById("closeModal");

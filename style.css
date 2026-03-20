@@ -289,30 +289,27 @@ h2::after {
   border-color: #fcb900;
   box-shadow: 0 0 15px rgba(252,185,0,0.5);
 }
-/* ===== 🔥 MODERN CLEAN TIMELINE ===== */
 
+/* ===== TIMELINE ===== */
 .lifecycle {
-  background: #0a0a0a;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1f2e 50%, #2d3748 100%);
   color: white;
   padding: 120px 20px;
   text-align: center;
 }
 
-/* Heading */
 .lifecycle h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
-/* Description */
 .lifecycle-desc {
   max-width: 800px;
   margin: 0 auto 80px;
   color: #aaa;
 }
 
-/* Timeline */
 .timeline {
   display: flex;
   justify-content: center;
@@ -372,7 +369,6 @@ h2::after {
   margin: 0 auto 15px;
 }
 
-/* Content */
 .phase h3 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -396,16 +392,9 @@ h2::after {
   border-top: 1px solid #2a2a2a;
 }
 
-/* CTA */
-.lifecycle-cta {
-  margin-top: 60px;
-  font-size: 20px;
-  color: #fcb900;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .phase {
+  .lifecycle .phase {
     transform: none !important;
     animation: fadeMobile 0.8s ease forwards;
   }
@@ -424,50 +413,114 @@ h2::after {
 }
 /* ===== ADVANTAGES SECTION ===== */
 .advantages {
-  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   padding: 80px 20px;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle pattern overlay */
+.advantages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(252,185,0,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59,130,246,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(34,197,94,0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+/* Ensure content stays above pattern */
+.advantages h2,
+.advantages .adv-desc,
+.advantages .word-grid {
+  position: relative;
+  z-index: 2;
 }
 
 .advantages h2 {
   font-size: 32px;
   margin-bottom: 10px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #fcb900, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .adv-desc {
-  color: #bbb;
+  color: #aaa;
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* GRID LAYOUT */
 .word-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  max-width: 1000px;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* WORD STYLE */
 .word-grid span {
-  padding: 8px 16px;
-  border: 1px solid #555;
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 12px;
+  background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(51,65,85,0.6);
+  border-radius: 12px;
   font-size: 14px;
-  color: #aaa;
+  color: #f1f5f9;
+  text-align: center;
   transition: all 0.4s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+  cursor: pointer;
+  min-height: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ICON STYLE */
+.word-grid .icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+/* HOVER EFFECT */
+.word-grid span:hover {
+  color: #000;
+  background: rgba(252,185,0,0.95);
+  backdrop-filter: blur(20px);
+  border-color: #f59e0b;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(252,185,0,0.7);
 }
 
 /* ACTIVE (POP EFFECT) */
 .word-grid span.active {
   color: #000;
-  background: #fcb900;
-  border-color: #fcb900;
+  background: rgba(252,185,0,0.95);
+  backdrop-filter: blur(20px);
+  border-color: #f59e0b;
   transform: scale(1.2);
   box-shadow: 0 0 15px rgba(252,185,0,0.7);
+  z-index: 10;
+  position: relative;
 }
 
 /* CTA */
@@ -566,15 +619,43 @@ h2::after {
 /* ===== CASE STUDIES SECTION ===== */
 .case-studies {
   padding: 80px 40px;
-  background: #0d0d0d; /* Black background */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   text-align: center;
-  color: #fff;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle pattern overlay like advantages */
+.case-studies::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 30%, rgba(34,197,94,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 70%, rgba(59,130,246,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(252,185,0,0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+/* Ensure content stays above pattern */
+.case-studies h2,
+.case-studies .case-desc,
+.case-studies .case-grid {
+  position: relative;
+  z-index: 2;
 }
 
 .case-studies h2 {
   font-size: 32px;
   margin-bottom: 10px;
-  color: #ffffff;
+  background: linear-gradient(45deg, #fcb900, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .case-desc {
@@ -641,18 +722,47 @@ h2::after {
 .case-content a:hover {
   text-decoration: underline;
 }
-/* ===== SITE MAP SECTION (MATCH IMAGE STYLE) ===== */
+
+/* ===== SITE MAP SECTION (MATCH ADVANTAGES) ===== */
 .sitemap-section {
-  background: #a8d5a2; /* light green like image */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   padding: 80px 40px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle pattern overlay like advantages */
+.sitemap-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 30% 40%, rgba(59,130,246,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(34,197,94,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(252,185,0,0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+/* Ensure content stays above pattern */
+.sitemap-section h2,
+.sitemap-section .sitemap-container {
+  position: relative;
+  z-index: 2;
 }
 
 /* BIG HEADING */
 .sitemap-section h2 {
   font-size: 48px;
   margin-bottom: 40px;
-  color: #111;
+  color: white;
+  background: linear-gradient(45deg, #fcb900, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* CONTAINER */
@@ -674,18 +784,19 @@ h2::after {
 .sitemap-col h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  color: #f1f5f9;
 }
 
 /* LINKS */
 .sitemap-col a {
   text-decoration: none;
-  color: #333;
+  color: #cbd5e1;
   font-size: 14px;
   transition: 0.3s;
 }
 
 .sitemap-col a:hover {
-  color: #000;
+  color: #fcb900;
 }
 
 /* ===== CONTACT MODAL ===== */
