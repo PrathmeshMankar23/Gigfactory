@@ -23,6 +23,24 @@
 
 <!-- Hero Section -->
 <section class="hero">
+  <div class="hero-slider">
+    <div class="hero-slide active">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Construction Project 1">
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Construction Project 2">
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" alt="Construction Project 3">
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Construction Project 4">
+    </div>
+    <div class="hero-slide">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb1924025" alt="Construction Project 5">
+    </div>
+  </div>
+  
   <div class="hero-content">
     <h1>Global Capability Center for Construction Services</h1>
     <p>Technology-enabled platform for integrated BIM, planning, designing & engineering</p>
@@ -30,6 +48,14 @@
     <a href="#" class="btn open-contact">Get Started → </a>
   </div>
   
+  <!-- Slider Indicators -->
+  <div class="hero-indicators">
+    <span class="indicator active" data-slide="0"></span>
+    <span class="indicator" data-slide="1"></span>
+    <span class="indicator" data-slide="2"></span>
+    <span class="indicator" data-slide="3"></span>
+    <span class="indicator" data-slide="4"></span>
+  </div>
 </section>
 
 <!-- CLIENT LOGO STRIP -->
@@ -122,63 +148,88 @@
   </p>
 
   <div class="timeline">
-    <div class="phase">
-      <div class="phase-number">01</div>
-      <h3>Initiation</h3>
-      <p>Feasibility & concept phase planning</p>
-      <ul>
-        <li>Early Design Clarity</li>
-        <li>Initial Budget Confidence</li>
-        <li>Stakeholder Alignment</li>
-      </ul>
+    <div class="phase" data-phase="initiation">
+      <div class="phase-circle">
+        <div class="phase-icon">🏗️</div>
+        <div class="phase-number">01</div>
+      </div>
+      <h3 class="phase-title">Initiation</h3>
+      <div class="phase-details">
+        <p>Feasibility & concept phase planning</p>
+        <ul>
+          <li>Early Design Clarity</li>
+          <li>Initial Budget Confidence</li>
+          <li>Stakeholder Alignment</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="phase">
+    <div class="phase" data-phase="pre-construction">
+      <div class="phase-circle">
+        <div class="phase-icon">📐</div>
         <div class="phase-number">02</div>
-      <h3>Pre Construction</h3>
-      <p>Planning Stage</p>
-      <ul>
-        <li>Coordinated Multi-Discipline Model</li>
-        <li>Reduced Design Conflicts</li>
-        <li>Execution Ready Docs</li>
-        <li>2D / 3D Models</li>
-      </ul>
+      </div>
+      <h3 class="phase-title">Pre Construction</h3>
+      <div class="phase-details">
+        <p>Planning Stage</p>
+        <ul>
+          <li>Coordinated Multi-Discipline Model</li>
+          <li>Reduced Design Conflicts</li>
+          <li>Execution Ready Docs</li>
+          <li>2D / 3D Models</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="phase">
+    <div class="phase" data-phase="design-development">
+      <div class="phase-circle">
+        <div class="phase-icon">🏛️</div>
         <div class="phase-number">03</div>
-      <h3>Design Development</h3>
-      <p>Detailed Engineering</p>
-      <ul>
-        <li>Better Visualization</li>
-        <li>Early Conflict Detection</li>
-        <li>Improved Collaboration</li>
-        <li>Reduced Rework</li>
-      </ul>
+      </div>
+      <h3 class="phase-title">Design Development</h3>
+      <div class="phase-details">
+        <p>Detailed Engineering</p>
+        <ul>
+          <li>Better Visualization</li>
+          <li>Early Conflict Detection</li>
+          <li>Improved Collaboration</li>
+          <li>Reduced Rework</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="phase">
+    <div class="phase" data-phase="execution">
+      <div class="phase-circle">
+        <div class="phase-icon">⚒️</div>
         <div class="phase-number">04</div>
-      <h3>Execution</h3>
-      <p>Construction Phase</p>
-      <ul>
-        <li>Timeline Optimization</li>
-        <li>BIM Integration</li>
-        <li>Issue Resolution</li>
-        <li>Automation Driven Work</li>
-      </ul>
+      </div>
+      <h3 class="phase-title">Execution</h3>
+      <div class="phase-details">
+        <p>Construction Phase</p>
+        <ul>
+          <li>Timeline Optimization</li>
+          <li>BIM Integration</li>
+          <li>Issue Resolution</li>
+          <li>Automation Driven Work</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="phase">
+    <div class="phase" data-phase="handover">
+      <div class="phase-circle">
+        <div class="phase-icon">🏆</div>
         <div class="phase-number">05</div>
-      <h3>Handover</h3>
-      <p>Final Delivery</p>
-      <ul>
-        <li>Digital Twin</li>
-        <li>Asset Data</li>
-        <li>Predictive Maintenance</li>
-        <li>Lifecycle Optimization</li>
-      </ul>
+      </div>
+      <h3 class="phase-title">Handover</h3>
+      <div class="phase-details">
+        <p>Final Delivery</p>
+        <ul>
+          <li>Digital Twin</li>
+          <li>Asset Data</li>
+          <li>Predictive Maintenance</li>
+          <li>Lifecycle Optimization</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -287,7 +338,7 @@
     Real construction projects delivered with quality, precision, and efficiency.
   </p>
 
-  <div class="case-grid">
+  <div class="case-container">
 
     <div class="case-card">
       <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
@@ -325,6 +376,11 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="case-scroll-bar">
+    <div class="case-scroll-progress"></div>
   </div>
 
 </section>
