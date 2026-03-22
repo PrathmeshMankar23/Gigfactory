@@ -460,6 +460,13 @@ h2::after {
   color: #000;
 }
 
+/* ===== HOVER STATE FOR DESCRIPTION ===== */
+.phase-circle:hover ~ .phase-details {
+  opacity: 1;
+  max-height: 350px;
+  transform: translateY(0);
+}
+
 /* ===== PHASE ICON ===== */
 .phase-icon {
   font-size: 38px;
