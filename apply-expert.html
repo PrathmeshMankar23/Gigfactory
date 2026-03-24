@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply as Expert - Gigfactory</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Expert Application Page Styles */
+    .expert-app-container {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      padding: 100px 20px 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .expert-app-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .expert-app-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .expert-app-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 25% 30%, rgba(59,130,246,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 70%, rgba(34,197,94,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(252,185,0,0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .expert-app-header > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .expert-app-header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      background: linear-gradient(45deg, #fcb900, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .expert-app-header p {
+      font-size: 18px;
+      color: #e2e8f0;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .expert-app-form {
+      padding: 40px;
+    }
+
+    .form-section {
+      margin-bottom: 40px;
+    }
+
+    .form-section h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #fcb900;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 14px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #fcb900;
+      box-shadow: 0 0 0 3px rgba(252,185,0,0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .file-upload {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .file-upload input[type="file"] {
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .file-upload-label {
+      display: block;
+      padding: 14px;
+      border: 2px dashed #fcb900;
+      border-radius: 10px;
+      text-align: center;
+      color: #666;
+      background: #f9f9f9;
+      transition: all 0.3s ease;
+    }
+
+    .file-upload:hover .file-upload-label {
+      background: #fcb900;
+      color: #111;
+      border-style: solid;
+    }
+
+    .submit-section {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .submit-btn {
+      background: #fcb900;
+      color: #111;
+      border: none;
+      padding: 16px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(252,185,0,0.3);
+    }
+
+    .submit-btn:hover {
+      background: #e0a800;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(252,185,0,0.4);
+    }
+
+    .back-btn {
+      background: transparent;
+      color: #666;
+      border: 2px solid #e0e0e0;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 15px;
+    }
+
+    .back-btn:hover {
+      background: #f0f0f0;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .expert-app-container {
+        padding: 80px 20px 40px;
+      }
+      
+      .expert-app-form {
+        padding: 30px 20px;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      
+      .expert-app-header h1 {
+        font-size: 28px;
+      }
+      
+      .expert-app-header p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="GF_logo.png" alt="Gigfactory Logo">
+      </div>
+      
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="expertise.html" class="nav-link">Our Expertise</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="login.html" class="nav-link">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- EXPERT APPLICATION CONTAINER -->
+  <div class="expert-app-container">
+    <div class="expert-app-wrapper">
+      
+      <!-- HEADER -->
+      <div class="expert-app-header">
+        <h1>Apply as Expert</h1>
+        <p>Join our network of construction and BIM professionals. Share your expertise and grow with Gigfactory.</p>
+      </div>
+
+      <!-- APPLICATION FORM -->
+      <form class="expert-app-form">
+        
+        <!-- PERSONAL INFORMATION -->
+        <div class="form-section">
+          <h3>Personal Information</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Full Name *</label>
+              <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="location">Location *</label>
+              <input type="text" id="location" name="location" placeholder="City, Country" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="linkedin">LinkedIn Profile</label>
+              <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+            </div>
+            <div class="form-group">
+              <label for="portfolio">Portfolio Website</label>
+              <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+            </div>
+          </div>
+        </div>
+
+        <!-- PROFESSIONAL DETAILS -->
+        <div class="form-section">
+          <h3>Professional Details</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="experience">Years of Experience *</label>
+              <select id="experience" name="experience" required>
+                <option value="">Select Experience</option>
+                <option value="0-2">0-2 Years</option>
+                <option value="3-5">3-5 Years</option>
+                <option value="6-10">6-10 Years</option>
+                <option value="11-15">11-15 Years</option>
+                <option value="15+">15+ Years</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="expertise">Primary Expertise *</label>
+              <select id="expertise" name="expertise" required>
+                <option value="">Select Expertise</option>
+                <option value="bim-modeling">BIM Modeling</option>
+                <option value="bim-consulting">BIM Consulting</option>
+                <option value="architecture">Architecture</option>
+                <option value="engineering">Engineering</option>
+                <option value="construction">Construction Management</option>
+                <option value="project-management">Project Management</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="jobtitle">Current Job Title</label>
+              <input type="text" id="jobtitle" name="jobtitle">
+            </div>
+            <div class="form-group">
+              <label for="company">Current Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="education">Educational Background</label>
+              <input type="text" id="education" name="education" placeholder="e.g., B.Arch, M.Eng, Civil Engineering">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="certifications">Certifications</label>
+              <textarea id="certifications" name="certifications" placeholder="List your relevant certifications (BIM, AutoCAD, Revit, etc.)"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES OFFERED -->
+        <div class="form-section">
+          <h3>Services Offered</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="services">Service Categories *</label>
+              <select id="services" name="services" required>
+                <option value="">Select Services</option>
+                <option value="bim-modeling">BIM Modeling Services</option>
+                <option value="bim-consulting">BIM Consulting</option>
+                <option value="documentation">Construction Documentation</option>
+                <option value="clash-detection">Clash Detection</option>
+                <option value="scan-to-bim">Scan to BIM</option>
+                <option value="training">BIM Training</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rate">Hourly Rate (USD)</label>
+              <input type="number" id="rate" name="rate" placeholder="e.g., 50">
+            </div>
+            <div class="form-group">
+              <label for="availability">Availability *</label>
+              <select id="availability" name="availability" required>
+                <option value="">Select Availability</option>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="project-based">Project-based</option>
+                <option value="consulting">Consulting</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="travel">Willingness to Travel</label>
+              <select id="travel" name="travel">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="limited">Limited</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- PORTFOLIO UPLOAD -->
+        <div class="form-section">
+          <h3>Portfolio & Documents</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="resume">Upload Resume/CV *</label>
+              <div class="file-upload">
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                <label for="resume" class="file-upload-label">
+                  📄 Choose Resume File (PDF, DOC, DOCX)
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="portfolio-file">Upload Portfolio</label>
+              <div class="file-upload">
+                <input type="file" id="portfolio-file" name="portfolio-file" accept=".pdf,.zip">
+                <label for="portfolio-file" class="file-upload-label">
+                  📁 Choose Portfolio File (PDF, ZIP)
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="projects">Key Projects</label>
+              <textarea id="projects" name="projects" placeholder="Describe 3-5 key projects you've worked on (project type, your role, duration, key achievements)"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="software">Software Proficiency</label>
+              <textarea id="software" name="software" placeholder="List software you're proficient in (Revit, AutoCAD, Navisworks, SketchUp, etc.)"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADDITIONAL INFORMATION -->
+        <div class="form-section">
+          <h3>Additional Information</h3>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="why-join">Why do you want to join Gigfactory?</label>
+              <textarea id="why-join" name="why-join" placeholder="Tell us about your motivation to join our expert network"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="references">Professional References</label>
+              <textarea id="references" name="references" placeholder="List 2-3 professional references (name, company, email, phone)"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBMIT SECTION -->
+        <div class="submit-section">
+          <button type="button" class="back-btn" onclick="window.history.back()">← Back</button>
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

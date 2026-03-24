@@ -411,3 +411,153 @@ window.addEventListener('orientationchange', () => {
     }
   }, 100);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const openLogin = document.getElementById("openLogin");
+  const loginModal = document.getElementById("loginModal");
+  const closeLogin = document.getElementById("closeLogin");
+
+  console.log('Login elements found:', { openLogin, loginModal, closeLogin });
+
+  if (openLogin && loginModal && closeLogin) {
+    openLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log('Login button clicked');
+      loginModal.style.display = "flex";
+    });
+
+    closeLogin.addEventListener("click", () => {
+      console.log('Close button clicked');
+      loginModal.style.display = "none";
+    });
+
+    loginModal.addEventListener("click", (e) => {
+      if (e.target.classList.contains("login-overlay")) {
+        console.log('Overlay clicked');
+        loginModal.style.display = "none";
+      }
+    });
+  } else {
+    console.log('Login elements not found');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Reduce Rework Popup
+  document.querySelector(".reduce").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("reducePopup").style.display = "block";
+  });
+
+  // Accelerate Delivery Popup
+  document.querySelector(".accelerate").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("acceleratePopup").style.display = "block";
+  });
+
+  // Construct Smart Popup
+  document.querySelector(".construct").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("constructPopup").style.display = "block";
+  });
+
+  // Optimize Cost Popup
+  document.querySelector(".optimize").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("optimizePopup").style.display = "block";
+  });
+
+  // Intelligence Popup
+  document.querySelector(".intelligence").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("intelligencePopup").style.display = "block";
+  });
+
+  // Close popup functionality
+  const closeButtons = [
+    { id: "closeReducePopup", popup: "reducePopup" },
+    { id: "closeAcceleratePopup", popup: "acceleratePopup" },
+    { id: "closeConstructPopup", popup: "constructPopup" },
+    { id: "closeOptimizePopup", popup: "optimizePopup" },
+    { id: "closeIntelligencePopup", popup: "intelligencePopup" }
+  ];
+
+  closeButtons.forEach(({ id, popup }) => {
+    const closeBtn = document.getElementById(id);
+    const popupElement = document.getElementById(popup);
+
+    if (closeBtn && popupElement) {
+      closeBtn.addEventListener("click", function() {
+        popupElement.style.display = "none";
+      });
+
+      // Close on overlay click
+      popupElement.addEventListener("click", function(e) {
+        if (e.target.classList.contains("popup-overlay")) {
+          popupElement.style.display = "none";
+        }
+      });
+    }
+  });
+});
+
+document.querySelector(".construct").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  document.getElementById("detail-section").classList.add("active");
+
+  // scroll to section smoothly
+  document.getElementById("detail-section").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.querySelector(".optimize").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  document.getElementById("optimize-section").classList.add("active");
+
+  // scroll to section smoothly
+  document.getElementById("optimize-section").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.querySelector(".accelerate").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  document.getElementById("delivery-section").classList.add("active");
+
+  // scroll to section smoothly
+  document.getElementById("delivery-section").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.querySelector(".intelligence").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  document.getElementById("lifecycle-section").classList.add("active");
+
+  // scroll to section smoothly
+  document.getElementById("lifecycle-section").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.querySelector(".reduce").addEventListener("click", function(e) {
+  e.preventDefault();
+
+  // hide all sections (if you add more later)
+  document.querySelectorAll(".detail-section, .info-section, .delivery-section, .lifecycle-section").forEach(sec => {
+    sec.classList.remove("active");
+  });
+
+  // show this section
+  document.getElementById("reduce-section").classList.add("active");
+
+  // smooth scroll
+  document.getElementById("reduce-section").scrollIntoView({
+    behavior: "smooth"
+  });
+});

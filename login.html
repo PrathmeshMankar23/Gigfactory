@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gigfactory Login</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      height: 100vh;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 80px; /* Account for fixed navbar */
+    }
+
+    .container {
+      width: 80%;
+      height: 80vh;
+      display: flex;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    /* LEFT SIDE */
+    .left {
+      width: 50%;
+      background: #020617;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .left p {
+      font-size: 16px;
+      opacity: 0.7;
+    }
+
+    /* RIGHT SIDE */
+    .right {
+      width: 50%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-form {
+      width: 70%;
+    }
+
+    .login-form h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-form label {
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .login-form button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: #0f172a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-form button:hover {
+      background: #1e293b;
+    }
+
+    .extra {
+      margin-top: 20px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .apply-btn {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-btn {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #fcb900;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .signup-btn:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="GF_logo.png" alt="Gigfactory Logo">
+      </div>
+      
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="expertise.html" class="nav-link">Our Expertise</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="login.html" class="nav-link active">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- LEFT SECTION -->
+    <div class="left">
+      <h1>CORE</h1>
+      <p>Gigfactory's Execution Control Platform</p>
+      <button onclick="window.location.href='signin.html'">Sign in</button>
+    </div>
+
+    <!-- RIGHT SECTION (LOGIN FORM) -->
+    <div class="right">
+      <form class="login-form">
+        <h2>Login</h2>
+
+        <label>Mail ID</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required>
+
+        <button type="submit">LOG IN</button>
+
+        <p class="extra">
+          Don't have an account? <a href="#" class="signup-btn">Sign up for free</a>
+        </p>
+
+        <p class="extra">
+          Interested in becoming a Gigfactory Expert?
+          <a href="apply-expert.html" class="apply-btn">Apply as an Expert</a>
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

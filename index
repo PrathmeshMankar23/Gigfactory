@@ -8,52 +8,57 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
+<!-- NAVIGATION -->
+<nav class="navbar">
   <div class="nav-container">
     <div class="nav-logo">
       <img src="GF_logo.png" alt="Gigfactory Logo">
     </div>
-    
-    <nav class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
-        <li><a href="expertise.html" class="nav-link">Our Expertise</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="login.html" class="nav-link">Login</a></li>
-      </ul>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="expertise.html">Our Expertise</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#" id="openLogin">Login</a></li>
+    </ul>
   </div>
+</nav>
+
+    <a href="index.html">Home</a>
+    <a href="expertise.html">Our Expertise</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+  </nav>
 </header>
 
-<!-- HERO SECTION -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-slider">
-
     <div class="hero-slide active">
-      <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1920&q=80" alt="Construction Site">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Construction Project 1">
     </div>
-
     <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80" alt="Building Project">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" alt="Construction Project 2">
     </div>
-
     <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80" alt="Architecture Construction">
+      <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" alt="Construction Project 3">
     </div>
-
     <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920" alt="Construction Workers">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c" alt="Construction Project 4">
     </div>
-
     <div class="hero-slide">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" alt="Modern Construction Project">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb1924025" alt="Construction Project 5">
     </div>
-
   </div>
-</section>
-
+  
+  <div class="hero-content">
+    <h1>Global Capability Center for Construction Services</h1>
+    <p>Technology-enabled platform for integrated BIM, planning, designing & engineering</p>
+    <p>Project Lifecycle Solutions Delivering across 10+ Million Sqft</p>
+    <a href="#" class="btn open-contact">Get Started → </a>
+  </div>
+  
   <!-- Slider Indicators -->
   <div class="hero-indicators">
     <span class="indicator active" data-slide="0"></span>
@@ -63,19 +68,12 @@
     <span class="indicator" data-slide="4"></span>
   </div>
 
-  <!-- Hero Content -->
-  <div class="hero-content">
-     <h1>Global Capability Center for Construction Services</h1>
-    <p>Technology-enabled platform for integrated BIM, planning, designing & engineering</p>
-    <p>Project Lifecycle Solutions Delivering across 10+ Million Sqft</p>
-    <a href="#" class="btn open-contact">Have a project in mind? Let's talk →</a>
-  </div>
-</section>
-
 <!-- CLIENT LOGO STRIP -->
+<<!-- CLIENT LOGO STRIP -->
 <section class="logo-strip">
   <div class="logo-slider">
     <div class="logo-track">
+
       <!-- ORIGINAL SET -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="Salesforce">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
@@ -104,7 +102,8 @@
 
     </div>
   </div>
-</section>
+
+
 
 <!-- Services -->
 <section class="services">
@@ -118,45 +117,44 @@
   <div class="services-grid">
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
-      <h3>2D</h3>
-      <p>Our team delivers clear, technically accurate drawings that help stakeholders communicate design intent and execute constuction efficicently.</p>
+      <div class="icon">📐</div>
+      <h3>2D CAD Services</h3>
+      <p>Our team delivers clear, technically accurate drawings that help stakeholders communicate design intent and execute construction efficiently.</p>
     </div>
 
     <div class="service-card">
       <div class="icon">🏗️</div>
-      <h3>BIM 3D</h3>
-      <p>Identify issues early, streamline collaboration, and ensure accurate documentation for construction.</p>
+      <h3>BIM 3D Modeling</h3>
+      <p>Identify issues early, streamline collaboration, and ensure accurate documentation for construction projects.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
-      <h3>4D</h3>
-      <p>Integrate schedules with BIM models to optimize and control construction sequencing.</p>
+      <div class="icon">📅</div>
+      <h3>4D Planning & Scheduling</h3>
+      <p>Integrate schedules with BIM models to optimize and control construction sequencing and project timelines.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon">📊</div>
       <h3>Project Planning & Controls</h3>
-      <p>We support Structured planning to enhance coordination and execution clarity.</p>
+      <p>We support structured planning to enhance coordination and execution clarity throughout project lifecycle.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon">💰</div>
       <h3>BOQ & Quantity Intelligence</h3>
       <p>We deliver accurate cost and quantity support for financial transparency and procurement alignment.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon">✅</div>
       <h3>Audit & Verification Services</h3>
-      <p> We ensure compliance, transparency, and technical accuracy across project stages.</p>
+      <p>We ensure compliance, transparency, and technical accuracy across all project stages and deliverables.</p>
     </div>
 
   </div>
 
   <h3 class="cta-text open-contact">Have a project in mind? Let's talk </h3>
-</section>
 
 <section class="lifecycle">
   <h2>End-to-End Construction Lifecycle Framework</h2>
@@ -252,7 +250,6 @@
     </div>
 
   <h3 class="lifecycle-cta open-contact">Got a challenge? Let's build something great </h3>
-</section>
 
 <section class="advantages">
   <h2>Advantages of Working With Gigfactory</h2>
@@ -261,15 +258,15 @@
     coordination, and lifecycle value.
   </p>
 
-  <div class="word-grid">
-    <!-- ORANGE (Clickable / Important) - Top Row -->
-    <a href="#reducePopup" class="word orange big reduce" data-key="reduceRework">Reduce Rework</a>
-    <a href="#acceleratePopup" class="word orange big accelerate" data-key="accelerateDelivery">Accelerate Delivery</a>
-    <a href="#constructPopup" class="word orange medium construct" data-key="constructSmart">Construct Smart</a>
-    <a href="#optimizePopup" class="word orange medium optimize" data-key="optimizeCost">Optimize Cost</a>
-    <a href="#intelligencePopup" class="word orange medium intelligence" data-key="intelligence">Intelligence</a>
+  <div class="word-cloud">
+    <!-- ORANGE (Clickable / Important) -->
+    <a href="#" class="word orange big reduce" data-key="reduceRework">Reduce Rework</a>
+    <a href="#" class="word orange big accelerate" data-key="accelerateDelivery">Accelerate Delivery</a>
+    <a href="#" class="word orange medium construct" data-key="constructSmart">Construct Smart</a>
+    <a href="#" class="word orange medium optimize" data-key="optimizeCost">Optimize Cost</a>
+    <a href="#" class="word orange medium intelligence" data-key="intelligence">Intelligence</a>
 
-    <!-- BLACK - Middle Row -->
+    <!-- BLACK -->
     <span class="word black medium budget">Budget accuracy</span>
     <span class="word black medium maintenance">Proactive maintenance</span>
     <span class="word black medium cost">Cost control</span>
@@ -278,7 +275,7 @@
     <span class="word black medium decision">Better decision-making</span>
     <span class="word black medium performance">Optimized operational performance</span>
 
-    <!-- GREY - Bottom Row -->
+    <!-- GREY -->
     <span class="word grey small kpi">KPI Visualization</span>
     <span class="word grey small delay">Delay Analysis</span>
     <span class="word grey small design">Design Clarity</span>
@@ -290,229 +287,14 @@
     <span class="word grey small conflicts">Reduced design conflicts</span>
     <span class="word grey small delivery">Accelerated delivery</span>
   </div>
-</section>
+  
 
-<!-- WORD POPUP MODALS -->
-<div class="word-popup" id="reducePopup">
-  <div class="popup-overlay"></div>
-  <div class="popup-content">
-    <span class="close-popup" id="closeReducePopup">&times;</span>
-    <h2>Reduce Rework</h2>
-    <p class="subtitle">Rework Reduction Through Intelligent Clash Management</p>
-    
-    <!-- PROJECT STATS -->
-    <div class="stats-grid">
-      <div class="stat-box">
-        <h3>18.5 Lakh+</h3>
-        <p>Sq. ft<br>Designing & Planning</p>
-      </div>
-      <div class="stat-box">
-        <h3>26.5 Lakh+</h3>
-        <p>Sq. ft<br>Building Information Modelling (BIM)</p>
-      </div>
-      <div class="stat-box">
-        <h3>9 Lakh+</h3>
-        <p>Sq. ft<br>3D Visualisation</p>
-      </div>
-      <div class="stat-box">
-        <h3>12 Lakh+</h3>
-        <p>Sq. ft<br>GFC / IFC Drawings</p>
-      </div>
-      <div class="stat-box">
-        <h3>10 Lakh+</h3>
-        <p>Sq. ft<br>QS and Estimation</p>
-      </div>
-      <div class="stat-box">
-        <h3>24 Lakh+</h3>
-        <p>Sq. ft<br>Peer Review & Green Building</p>
-      </div>
-    </div>
+  
 
-    <!-- CONTENT -->
-    <h3 class="section-heading">We proactively eliminate costly site errors through:</h3>
-    <ul>
-      <li>Advanced clash detection (Navisworks-based workflows)</li>
-      <li>Collaborative clash resolution</li>
-      <li>BEP-driven BIM execution</li>
-      <li>Fully coordinated LOD 350+ models</li>
-    </ul>
+  
 
-    <!-- RESULT -->
-    <h3 class="section-heading">Result:</h3>
-    <ul>
-      <li>Reduced rework</li>
-      <li>Faster execution</li>
-      <li>Improved trade coordination</li>
-      <li>Lower project risk</li>
-    </ul>
-
-    <p class="highlight">
-      In one hospitality project, we resolved 28 major and 196 minor clashes before site impact.
-    </p>
-  </div>
-</div>
-
-<div class="word-popup" id="acceleratePopup">
-  <div class="popup-overlay"></div>
-  <div class="popup-content">
-    <span class="close-popup" id="closeAcceleratePopup">&times;</span>
-    <h2>Accelerate Delivery</h2>
-    <p class="subtitle">4D Planning That Saves Time & Money</p>
-    
-    <p>We compress project timelines by integrating 4D BIM simulation, trade-wise progress tracking, and look-ahead planning directly into the execution workflow.</p>
-    
-    <p class="sub-heading">Through:</p>
-    <ul>
-      <li>4D Schedule Integration (MS Project + Synchro)</li>
-      <li>Zone-wise & Trade-wise Progress Tracking</li>
-      <li>Delay Analysis & Scenario Simulation</li>
-      <li>Pre-construction Clash Detection (LOD 350+)</li>
-    </ul>
-
-    <p>We identify bottlenecks before they impact the site, streamline subcontractor coordination, and reduce execution friction.</p>
-
-    <p class="sub-heading">Result:</p>
-    <p>Faster decision-making. Fewer disruptions. Optimized construction timelines.</p>
-  </div>
-</div>
-
-<div class="word-popup" id="constructPopup">
-  <div class="popup-overlay"></div>
-  <div class="popup-content">
-    <span class="close-popup" id="closeConstructPopup">&times;</span>
-    <h2>Construct Smart</h2>
-    <p class="subtitle">End-to-End Construction Intelligence</p>
-    
-    <p>We don't just deliver drawings — we deliver integrated project intelligence. From 3D BIM (LOD 100–500) to 4D planning, 6D asset management, and AI-powered automation, Gigfactory provides a unified ecosystem that connects:</p>
-    
-    <ul>
-      <li>Architecture</li>
-      <li>Structure</li>
-      <li>MEPF</li>
-      <li>Planning</li>
-      <li>BOQ & Quantity Take-Off</li>
-      <li>Documentation</li>
-      <li>Operations & Maintenance</li>
-    </ul>
-
-    <p>This ensures seamless coordination from concept to facility lifecycle.</p>
-
-    <!-- IMAGE GRID -->
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600">
-        <p>Architecture</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600">
-        <p>Structure</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600">
-        <p>MEPF</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1521790360280-9a9d8c67fbb2?w=600">
-        <p>Planning</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600">
-        <p>BOQ & Quantity Take-Off</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581090700227-4c4b3c5d6f03?w=600">
-        <p>Documentation</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b5e0b9b?w=600">
-        <p>Operations & Maintenance</p>
-      </div>
-    </div>
-
-    <!-- IMPACT SECTION -->
-    <div class="impact">
-      <h3>Proven Scale & Real-World Impact</h3>
-      <ul>
-        <li>10+ Million Sq. Ft. Delivered</li>
-        <li>1000+ Domain Experts Network</li>
-        <li>Projects Across India, UAE & US</li>
-        <li>Mission-Critical & Data Center Experience</li>
-        <li>NDA-Compliant High-Confidentiality Delivery</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="word-popup" id="optimizePopup">
-  <div class="popup-overlay"></div>
-  <div class="popup-content">
-    <span class="close-popup" id="closeOptimizePopup">&times;</span>
-    <h2>Optimize Cost</h2>
-    <p class="subtitle">4D Planning That Saves Time & Money</p>
-    
-    <p>We integrate models with schedules using tools like MS Project & Synchro to create powerful 4D simulations.</p>
-    
-    <p><strong>Our 4D capabilities include:</strong></p>
-    <ul>
-      <li>Zone-wise & trade-wise progress tracking</li>
-      <li>Look-ahead planning</li>
-      <li>Delay analysis</li>
-      <li>Scenario simulation</li>
-    </ul>
-
-    <p class="underline">Real Impact:</p>
-    <p>We helped crash a commercial renovation timeline by 4 weeks, directly reducing client rental costs and accelerating occupancy.</p>
-    
-    <h3>6D BIM for Smart Asset Management</h3>
-    <p>We extend BIM beyond construction into operations.</p>
-    
-    <p><strong>Static 6D (Implemented)</strong></p>
-    <ul>
-      <li>Asset tagging</li>
-      <li>Maintenance schedules</li>
-      <li>Warranty integration</li>
-      <li>Procurement tracking</li>
-      <li>Digital twin handover</li>
-    </ul>
-
-    <p><strong>Dynamic 6D (Future-Ready)</strong></p>
-    <ul>
-      <li>IoT integration roadmap</li>
-      <li>Predictive maintenance</li>
-      <li>Real-time asset insights</li>
-      <li>Performance optimization</li>
-    </ul>
-
-    <p>We help developers shift from project delivery to lifecycle value creation.</p>
-  </div>
-</div>
-
-<div class="word-popup" id="intelligencePopup">
-  <div class="popup-overlay"></div>
-  <div class="popup-content">
-    <span class="close-popup" id="closeIntelligencePopup">&times;</span>
-    <h2>Enable Lifecycle Intelligence</h2>
-    <p class="subtitle">LOD 500 As-Built Modeling & 6D Asset Integration</p>
-    
-    <p>We extend BIM beyond construction by delivering data-rich LOD 500 as-built models and 6D asset integration for long-term operational value.</p>
-
-    <p class="sub-heading">Through:</p>
-    <ul>
-      <li>LOD 500 As-Built Modeling</li>
-      <li>Scan-to-BIM & Point Cloud Integration</li>
-      <li>Asset Tagging & Maintenance Data Integration</li>
-      <li>Procurement & Warranty Tracking</li>
-      <li>Static Digital Twin Development</li>
-    </ul>
-
-    <p>We provide facility teams with structured, reliable digital asset data that improves maintenance planning, audits, and lifecycle cost optimization.</p>
-
-    <p class="sub-heading">Result:</p>
-    <p>Smarter asset management. Reduced operational uncertainty. Long-term value protection.</p>
-  </div>
-</div>
-
-<h2 id="detail-title">Construction Smart</h2>
+  
+    <h2 id="detail-title">Construction Smart</h2>
 
     <p class="subtitle">End-to-End Construction Intelligence</p>
 
@@ -779,8 +561,7 @@
   </div>
 
 
-<h3 class="cta open-contact">Looking for smarter construction solutions? Let's Talk </h3></section>
-
+<h3 class="cta open-contact">Looking for smarter construction solutions? Let's Talk </h3>
 <section class="testimonials">
   <h2>Trusted by hundreds of Construction Industry Professionals</h2>
 
@@ -837,7 +618,6 @@
   </p>
 
   <h3 class="insight">Insights & Industry Knowledge</h3>
-</section>
 
 <section class="case-studies">
   <h2>Our Case Studies</h2>
@@ -890,13 +670,11 @@
     <div class="case-scroll-progress"></div>
   </div>
 
-</section>
 
 <!-- CTA -->
 <section class="cta cta-main">
   <h2>Ready to Move Your Project Forward?</h2>
  <a href="#" class="btn open-contact">Let's Connect →</a>
-</section>
 
 <section class="sitemap-section">
 
@@ -929,7 +707,178 @@
 
   </div>
 
-</section>
+
+<!-- ===== WORD POPUP MODALS ===== -->
+<div class="word-popup" id="reducePopup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <span class="close-popup" id="closeReducePopup">&times;</span>
+    <h2>Reduce Rework</h2>
+    <p class="subtitle">Rework Reduction Through Intelligent Clash Management</p>
+    <p>We proactively eliminate costly site errors through:</p>
+    <ul>
+      <li>Advanced clash detection (Navisworks-based workflows)</li>
+      <li>Collaborative clash resolution</li>
+      <li>BEP-driven BIM execution</li>
+      <li>Fully coordinated LOD 350+ models</li>
+    </ul>
+    <h3>Result:</h3>
+    <ul>
+      <li>Reduced rework</li>
+      <li>Faster execution</li>
+      <li>Improved trade coordination</li>
+      <li>Lower project risk</li>
+    </ul>
+    <p>In one hospitality project, we resolved 28 major and 196 minor clashes before site impact.</p>
+  </div>
+</div>
+
+<div class="word-popup" id="acceleratePopup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <span class="close-popup" id="closeAcceleratePopup">&times;</span>
+    <h2>Accelerate Delivery</h2>
+    <p class="subtitle">4D Planning That Saves Time & Money</p>
+    <p>We compress project timelines by integrating 4D BIM simulation, trade-wise progress tracking, and look-ahead planning directly into the execution workflow.</p>
+    <h3>Through:</h3>
+    <ul>
+      <li>4D Schedule Integration (MS Project + Synchro)</li>
+      <li>Zone-wise & Trade-wise Progress Tracking</li>
+      <li>Delay Analysis & Scenario Simulation</li>
+      <li>Pre-construction Clash Detection (LOD 350+)</li>
+    </ul>
+    <h3>Result:</h3>
+    <p>Faster decision-making. Fewer disruptions. Optimized construction timelines.</p>
+  </div>
+</div>
+
+<div class="word-popup" id="constructPopup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <span class="close-popup" id="closeConstructPopup">&times;</span>
+    <h2>Construct Smart</h2>
+    <p class="subtitle">End-to-End Construction Intelligence</p>
+    <p>We don't just deliver drawings — we deliver integrated project intelligence. From 3D BIM (LOD 100–500) to 4D planning, 6D asset management, and AI-powered automation, Gigfactory provides a unified ecosystem that connects:</p>
+    <ul>
+      <li>Architecture</li>
+      <li>Structure</li>
+      <li>MEPF</li>
+      <li>Planning</li>
+      <li>BOQ & Quantity Take-Off</li>
+      <li>Documentation</li>
+      <li>Operations & Maintenance</li>
+    </ul>
+    <p>This ensures seamless coordination from concept to facility lifecycle.</p>
+    <!-- IMAGE GRID -->
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600">
+        <p>Architecture</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600">
+        <p>Structure</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600">
+        <p>MEPF</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521790360280-9a9d8c67fbb2?w=600">
+        <p>Planning</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600">
+        <p>BOQ & Quantity Take-Off</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581090700227-4c4b3c5d6f03?w=600">
+        <p>Documentation</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091215367-59ab6b5e0b9b?w=600">
+        <p>Operations & Maintenance</p>
+      </div>
+    </div>
+    <!-- IMPACT SECTION -->
+    <h3>Proven Scale & Real-World Impact</h3>
+    <ul>
+      <li>10+ Million Sq. Ft. Delivered</li>
+      <li>1000+ Domain Experts Network</li>
+      <li>Projects Across India, UAE & US</li>
+      <li>Mission-Critical & Data Center Experience</li>
+      <li>NDA-Compliant High-Confidentiality Delivery</li>
+    </ul>
+  </div>
+</div>
+
+<div class="word-popup" id="optimizePopup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <span class="close-popup" id="closeOptimizePopup">&times;</span>
+    <h2>Optimize Cost</h2>
+    <p class="subtitle">4D Planning That Saves Time & Money</p>
+    <p>We integrate models with schedules using tools like MS Project & Synchro to create powerful 4D simulations.</p>
+    <h3>Our 4D capabilities include:</h3>
+    <ul>
+      <li>Zone-wise & trade-wise progress tracking</li>
+      <li>Look-ahead planning</li>
+      <li>Delay analysis</li>
+      <li>Scenario simulation</li>
+    </ul>
+    <h3>Real Impact:</h3>
+    <p>We helped crash a commercial renovation timeline by 4 weeks, directly reducing client rental costs and accelerating occupancy.</p>
+    <h3>6D BIM for Smart Asset Management</h3>
+    <p>We extend BIM beyond construction into operations.</p>
+    <h4>Static 6D (Implemented)</h4>
+    <ul>
+      <li>Asset tagging</li>
+      <li>Maintenance schedules</li>
+      <li>Warranty integration</li>
+      <li>Procurement tracking</li>
+      <li>Digital twin handover</li>
+    </ul>
+    <h4>Dynamic 6D (Future-Ready)</h4>
+    <ul>
+      <li>IoT integration roadmap</li>
+      <li>Predictive maintenance</li>
+      <li>Real-time asset insights</li>
+      <li>Performance optimization</li>
+    </ul>
+    <p>We help developers shift from project delivery to lifecycle value creation.</p>
+  </div>
+</div>
+
+<div class="word-popup" id="intelligencePopup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <span class="close-popup" id="closeIntelligencePopup">&times;</span>
+    <h2>Enable Lifecycle Intelligence</h2>
+    <p class="subtitle">6D BIM for Smart Asset Management</p>
+    <p>We extend BIM beyond construction by delivering data-rich LOD 500 as-built models and 6D asset integration for long-term operational value.</p>
+    <h3>Through:</h3>
+    <ul>
+      <li>LOD 500 As-Built Modeling</li>
+      <li>Scan-to-BIM & Point Cloud Integration</li>
+      <li>Asset Tagging & Maintenance Data Integration</li>
+      <li>Procurement & Warranty Tracking</li>
+      <li>Static Digital Twin Development</li>
+    </ul>
+    <p>We provide facility teams with structured, reliable digital asset data that improves maintenance planning, audits, and lifecycle cost optimization.</p>
+    <h3>Result:</h3>
+    <p>Smarter asset management. Reduced operational uncertainty. Long-term value protection.</p>
+  </div>
+</div>
+
+<!-- ===== WORD POPUP MODAL ===== -->
+<div class="word-popup" id="wordPopup">
+  <div class="popup-overlay"></div>
+  <div class="popup-content">
+    <span class="close-popup" id="closeWordPopup">&times;</span>
+    <h2 id="popup-title"></h2>
+    <div id="popup-content"></div>
+  </div>
+</div>
 
 <!-- ===== CONTACT MODAL ===== -->
 <div class="contact-modal" id="contactModal">
@@ -958,6 +907,7 @@
   </div>
 </div>
 
+
 <div class="login-modal" id="loginModal">
   <div class="login-overlay"></div>
 
@@ -967,7 +917,7 @@
 
     <p class="core-small">what is</p>
     <h1 class="core-big">CORE</h1>
-    <p class="core-text">Gigfactory's Execution Control Platform</p>
+    <p class="core-text">Gigfactory’s Execution Control Platform</p>
 
     <input type="text" placeholder="MAIL ID">
     <input type="password" placeholder="Password">
