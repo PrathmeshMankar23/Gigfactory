@@ -7,11 +7,13 @@
   <style>
     body {
       height: 100vh;
-      background: linear-gradient(to right, #0f172a, #1e293b);
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding-top: 80px; /* Account for fixed navbar */
+      gap: 30px;
     }
 
     .container {
@@ -39,6 +41,20 @@
       margin-bottom: 10px;
     }
 
+    .core-link {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .core-link:hover {
+      color: #fcb900;
+      transform: scale(1.05);
+    }
+
     .left p {
       font-size: 16px;
       opacity: 0.7;
@@ -59,6 +75,19 @@
 
     .login-form h2 {
       margin-bottom: 20px;
+    }
+
+    .login-form h1 {
+      font-size: 32px;
+      margin-bottom: 5px;
+      color: #0f172a;
+      font-weight: bold;
+    }
+
+    .login-form p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
     }
 
     .login-form label {
@@ -118,6 +147,47 @@
     .signup-btn:hover {
       text-decoration: underline;
     }
+
+    .expert-box {
+      background: linear-gradient(135deg, #f4f6f9, #e8eaf6);
+      border: 2px solid #fcb900;
+      border-radius: 12px;
+      padding: 20px;
+      width: 80%;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .expert-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-color: #f59e0b;
+    }
+
+    .expert-text {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .expert-box .apply-btn {
+      background: #fcb900;
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .expert-box .apply-btn:hover {
+      background: #f59e0b;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(252,185,0,0.3);
+    }
   </style>
 </head>
 <body>
@@ -147,7 +217,6 @@
     <div class="left">
       <h1>CORE</h1>
       <p>Gigfactory's Execution Control Platform</p>
-      <button onclick="window.location.href='signin.html'">Sign in</button>
     </div>
 
     <!-- RIGHT SECTION (LOGIN FORM) -->
@@ -163,18 +232,16 @@
 
         <button type="submit">LOG IN</button>
 
-        <p class="extra">
-          Don't have an account? <a href="#" class="signup-btn">Sign up for free</a>
-        </p>
-
-        <p class="extra">
-          Interested in becoming a Gigfactory Expert?
-          <a href="apply-expert.html" class="apply-btn">Apply as an Expert</a>
-        </p>
-
       </form>
     </div>
 
+  </div>
+
+  <!-- APPLY AS EXPERT BOX - SEPARATE -->
+  <div class="expert-box">
+    <p class="expert-text">Interested in becoming a Gigfactory Expert?</p>
+    <p class="expert-text">Submit your profile and explore freelance opportunities with us</p>
+    <a href="apply-expert.html" class="apply-btn">Apply as an Expert</a>
   </div>
 
 </body>

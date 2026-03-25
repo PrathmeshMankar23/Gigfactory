@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 40px;
+}
+
+/* HIDE ALL */
+.section {
+  display: none;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background: #1e293b;
+  border-radius: 12px;
+}
+
+/* SHOW TARGET */
+.section:target {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+/* DEFAULT FALLBACK (optional) */
+body:not(:has(:target)) #reducePopup {
+  display: block;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  color: orange;
+}
