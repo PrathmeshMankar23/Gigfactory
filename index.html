@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#fcb900">
   <title>Gigfactory - Construction Excellence</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
 
@@ -18,7 +24,7 @@
     <nav class="nav-menu">
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
         <li><a href="expertise.html" class="nav-link">Our Expertise</a></li>
         <li><a href="projects.html" class="nav-link">Projects</a></li>
         <li><a href="login.html" class="nav-link">Login</a></li>
@@ -120,37 +126,37 @@
   <div class="services-grid">
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon"><img src="2D.png" alt="2D"></div>
       <h3>2D</h3>
       <p>Our team delivers clear, technically accurate drawings that help stakeholders communicate design intent and execute constuction efficicently.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon"><img src="3D.png" alt="3D"></div>
       <h3>BIM 3D</h3>
       <p>Identify issues early, streamline collaboration, and ensure accurate documentation for construction.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon"><img src="4D.png" alt="4D"></div>
       <h3>4D</h3>
       <p>Integrate schedules with BIM models to optimize and control construction sequencing.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon"><img src="pp&c.png" alt="PP&C"></div>
       <h3>Project Planning & Controls</h3>
       <p>We support Structured planning to enhance coordination and execution clarity.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon"><img src="boq&qt.png" alt="BOQ&QT"></div>
       <h3>BOQ & Quantity Intelligence</h3>
       <p>We deliver accurate cost and quantity support for financial transparency and procurement alignment.</p>
     </div>
 
     <div class="service-card">
-      <div class="icon">🏗️</div>
+      <div class="icon"><img src="avs.png" alt="AVS"></div>
       <h3>Audit & Verification Services</h3>
       <p> We ensure compliance, transparency, and technical accuracy across project stages.</p>
     </div>
@@ -168,100 +174,107 @@
     into a seamless delivery system.
   </p>
 
-  <div class="timeline">
-    <!-- Card 1 -->
-    <div class="timeline-card blue">
-      <div class="timeline-dot">01</div>
-      <div class="card-content">
-        <h3>Initiation</h3>
-        <p class="subtitle">FEASIBILITY & CONCEPT PHASE PLANNING</p>
-        <div class="outputs">
-          <h4>KEY OUTPUTS</h4>
+  <div class="lifecycle-circles">
+    <div class="circle-item" data-stage="1">
+      <div class="circle">
+        <div class="circle-icon">🏗️</div>
+        <div class="circle-number">01</div>
+      </div>
+      <div class="circle-title">Initiation</div>
+      <div class="circle-description" id="desc-1">
+        <div class="desc-content">
+          <h4>Feasibility & concept phase planning</h4>
           <ul>
-            <li>Early Design Clarity</li>
-            <li>Initial Budget Confidence</li>
-            <li>Stakeholder Alignment</li>
+            <li><span class="arrow">→</span> Early Design Clarity</li>
+            <li><span class="arrow">→</span> Initial Budget Confidence</li>
+            <li><span class="arrow">→</span> Stakeholder Alignment</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="timeline-card indigo">
-      <div class="timeline-dot">02</div>
-      <div class="card-content">
-        <h3>Pre-Construction Planning</h3>
-        <p class="subtitle">PRE CONSTRUCTION</p>
-        <div class="outputs">
-          <h4>KEY OUTPUTS</h4>
+    <div class="circle-item" data-stage="2">
+      <div class="circle">
+        <div class="circle-icon">📋</div>
+        <div class="circle-number">02</div>
+      </div>
+      <div class="circle-title">Pre Construction</div>
+      <div class="circle-description" id="desc-2">
+        <div class="desc-content">
+          <h4>Pre Construction</h4>
           <ul>
-            <li>Coordinated Multi-Discipline Model</li>
-            <li>Reduced Design Conflicts</li>
-            <li>Execution-Ready Documentation</li>
-            <li>2D/3D</li>
+            <li><span class="arrow">→</span> Coordinated Multi-Discipline Model</li>
+            <li><span class="arrow">→</span> Reduced Design Conflicts</li>
+            <li><span class="arrow">→</span> Execution-Ready Documentation</li>
+            <li><span class="arrow">→</span> 2D/3D</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="timeline-card purple">
-      <div class="timeline-dot">03</div>
-      <div class="card-content">
-        <h3>Design Development</h3>
-        <p class="subtitle">DESIGN DEVELOPMENT</p>
-        <div class="outputs">
-          <h4>KEY OUTPUTS</h4>
+    <div class="circle-item" data-stage="3">
+      <div class="circle">
+        <div class="circle-icon">🎨</div>
+        <div class="circle-number">03</div>
+      </div>
+      <div class="circle-title">Design Development</div>
+      <div class="circle-description" id="desc-3">
+        <div class="desc-content">
+          <h4>Design Development</h4>
           <ul>
-            <li>Improved Design Clarity</li>
-            <li>Early Conflict Identification</li>
-            <li>Better Collaboration</li>
-            <li>Reduced Design Revisions</li>
+            <li><span class="arrow">→</span> Improved Design Clarity</li>
+            <li><span class="arrow">→</span> Early Conflict Identification</li>
+            <li><span class="arrow">→</span> Better Collaboration</li>
+            <li><span class="arrow">→</span> Reduced Design Revisions</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Card 4 -->
-    <div class="timeline-card pink">
-      <div class="timeline-dot">04</div>
-      <div class="card-content">
-        <h3>Execution & Monitoring</h3>
-        <p class="subtitle">CONSTRUCTION & EXECUTION PHASE</p>
-        <div class="outputs">
-          <h4>KEY OUTPUTS</h4>
+    <div class="circle-item" data-stage="4">
+      <div class="circle">
+        <div class="circle-icon">⚙️</div>
+        <div class="circle-number">04</div>
+      </div>
+      <div class="circle-title">Execution</div>
+      <div class="circle-description" id="desc-4">
+        <div class="desc-content">
+          <h4>Construction & Execution Phase</h4>
           <ul>
-            <li>Timeline Optimization via 4D</li>
-            <li>Reduced Rework via BIM</li>
-            <li>Proactive Issue Resolution</li>
-            <li>Data-Driven Execution</li>
+            <li><span class="arrow">→</span> Timeline Optimization via 4D</li>
+            <li><span class="arrow">→</span> Reduced Rework via BIM</li>
+            <li><span class="arrow">→</span> Proactive Issue Resolution</li>
+            <li><span class="arrow">→</span> Data-Driven Execution</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Card 5 -->
-    <div class="timeline-card green">
-      <div class="timeline-dot">05</div>
-      <div class="card-content">
-        <h3>Handover</h3>
-        <p class="subtitle">HANDOVER & COMMISSIONING PHASE</p>
-        <div class="outputs">
-          <h4>KEY OUTPUTS</h4>
+    <div class="circle-item" data-stage="5">
+      <div class="circle">
+        <div class="circle-icon">🏢</div>
+        <div class="circle-number">05</div>
+      </div>
+      <div class="circle-title">Handover</div>
+      <div class="circle-description" id="desc-5">
+        <div class="desc-content">
+          <h4>Handover & Commissioning Phase</h4>
           <ul>
-            <li>Digital Twin</li>
-            <li>Legal & Operational BIM Model</li>
-            <li>Structured Asset Data</li>
-            <li>Predictive Maintenance</li>
+            <li><span class="arrow">→</span> Digital Twin</li>
+            <li><span class="arrow">→</span> Legal & Operational BIM Model</li>
+            <li><span class="arrow">→</span> Structured Asset Data</li>
+            <li><span class="arrow">→</span> Predictive Maintenance</li>
           </ul>
         </div>
       </div>
     </div>
+  </div>
 
-    </div>
-
+</section>
+<section>
   <h3 class="lifecycle-cta open-contact">Got a challenge? Let's build something great </h3>
 </section>
+
 
 <section class="advantages">
   <h2>Advantages of Working With Gigfactory</h2>
@@ -528,7 +541,9 @@
 
 
 
-<h3 class="cta open-contact">Looking for smarter construction solutions? Let's Talk </h3></section>
+<section class="cta-section">
+  <h3 class="cta open-contact">Looking for smarter construction solutions? Let's Talk </h3>
+</section>
 
 <section class="testimonials">
   <h2>Trusted by hundreds of Construction Industry Professionals</h2>
@@ -588,7 +603,7 @@
   <h3 class="insight">Insights & Industry Knowledge</h3>
 </section>
 
-<section class="case-studies">
+<section class="case-studies" id="case-studies">
   <h2>Our Case Studies</h2>
   <p class="case-desc">
     Real construction projects delivered with quality, precision, and efficiency.
@@ -663,8 +678,8 @@
 
     <div class="sitemap-col">
       <h3>Company</h3>
-      <a href="#">About Us</a>
-      <a href="#">Projects</a>
+      <a href="about.html">About Us</a>
+      <a href="projects.html">Projects</a>
       <a href="#">Careers</a>
       <a href="#">Blog</a>
     </div>

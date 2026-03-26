@@ -561,3 +561,44 @@ document.querySelector(".reduce").addEventListener("click", function(e) {
     behavior: "smooth"
   });
 });
+
+/* ===== LIFECYCLE CIRCLES INTERACTION ===== */
+document.addEventListener('DOMContentLoaded', function() {
+  // Get DOM elements
+  const circleItems = document.querySelectorAll('.circle-item');
+  const descriptionBoxes = document.querySelectorAll('.circle-description');
+  
+  // Add click event listeners to circles
+  circleItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent event bubbling
+      e.preventDefault(); // Prevent default behavior
+      
+      // Remove active class from all circles
+      circleItems.forEach(circle => circle.classList.remove('active'));
+      // Add active class to clicked circle
+      this.classList.add('active');
+    });
+  });
+
+  // Add click event listeners to description boxes
+  descriptionBoxes.forEach(box => {
+    box.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent event bubbling
+      e.preventDefault(); // Prevent default behavior
+      
+      // Remove active class from all circles
+      circleItems.forEach(circle => circle.classList.remove('active'));
+    });
+  });
+
+  // Hide description boxes when clicking outside
+  document.addEventListener('click', function(e) {
+    // Check if click is outside any circle item or description box
+    const clickedOutside = !e.target.closest('.circle-item') && !e.target.closest('.circle-description');
+    
+    if (clickedOutside) {
+      circleItems.forEach(circle => circle.classList.remove('active'));
+    }
+  });
+});
